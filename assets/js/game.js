@@ -1,16 +1,16 @@
-//player stats
-var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 100;
-var playerAttack = 10;
-var playerMoney = 10;
-console.log(playerName, playerAttack, playerHealth);
+    //player stats
+    var playerName = window.prompt("What is your robot's name?");
+    var playerHealth = 100;
+    var playerAttack = 10;
+    var playerMoney = 10;
+    console.log(playerName, playerAttack, playerHealth);
 
-//enemy stats
-var enemyName = "Roborto";
-var enemyHealth = 50;
-var enemyAttack = 12;
+    //enemy stats
+    var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+    var enemyAttack = 12;
+    var enemyHealth = 50;
 
-var fight = function(){
+var fight = function(enemyName){
     //informs that the fight has start via popout
     window.alert("Welcome to Robot Gladiators!");
 
@@ -60,11 +60,8 @@ var fight = function(){
     else {
         window.alert("You need to choose a valid option. Try again!");
     }
-
-
-
-
-
 }//end of code block
 
-fight();
+for(var i = 0; i<enemyNames.length; i++){
+    fight(enemyNames[i])
+}
